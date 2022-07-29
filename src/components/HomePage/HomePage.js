@@ -17,8 +17,8 @@ const HomePage = () => {
         <button onClick={fetchMealsHandler}>Search Meal</button>
       </div>
       <div className="home-meal">
-        {meals ?meals.map(meal=>(
-          <div className='home-meals-grid' key={meal.idMeal}>
+        {meals && meals?.length >1 ?meals.map(meal=>(
+          <div className='home-meals-grid'>
             <img src={meal.strMealThumb}alt="#"/>
             <h4>{meal.strMeal}</h4>
 
