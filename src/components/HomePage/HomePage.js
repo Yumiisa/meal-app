@@ -16,14 +16,14 @@ const HomePage = () => {
         value={searchTerm} onChange={(e)=>setSearchTerm (e.target.value)} />
         <button onClick={fetchMealsHandler}>Search Meal</button>
       </div>
-      <div className="home-meal">
-        {meals && meals?.length >1 ?meals.map(meal=>(
-          <div className='home-meals-grid'>
+      <div className="home-grid" >
+        {meals? (meals.map(meal=>(
+          <div className='home-meal' key={meal.idMeal}>
             <img src={meal.strMealThumb}alt="#"/>
             <h4>{meal.strMeal}</h4>
 
           </div>
-        )):(<h2>No Meal Found! Try Another Search</h2>)}
+        ))):(<h2>No Meal Found! Try Another Search</h2>)}
       </div>
     </div>
   )
