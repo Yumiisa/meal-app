@@ -37,7 +37,9 @@
       height: 50%;
       top: 67%;
       width: 150px;
-      overflow: hidden;
+      overflow-y:scroll;
+      scrollbar-width: none;
+      scroll-behavior: auto;
       text-align: center;
      
       

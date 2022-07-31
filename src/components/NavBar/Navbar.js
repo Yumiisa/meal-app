@@ -10,9 +10,10 @@ const Navbar = () => {
         </div>
         <div className="navbar-links">
             <ul>
-                <Link to="/"><li>Home</li></Link>
+              <Link to="/"><li>Login</li></Link>
+               <Link to="/home"><li>Home</li></Link>
                 <Link to="/categories"><li>Categories</li></Link>
-                 <Link to="/random"><li>RandomMeal</li></Link>
+                <Link to="/random"><li>RandomMeal</li></Link>
             </ul>
         </div>
     </div>

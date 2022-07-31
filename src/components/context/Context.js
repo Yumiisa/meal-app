@@ -3,7 +3,7 @@ import axios from 'axios';
 export const myContext = createContext()
 export const AppContext=({children})=>{
     const [meals, setMeals]=useState([]);
-
+     
     const [categories, setCategories] = useState([]);
     const [randomMeal, setRandomMeal] = useState([])
     const fetchHomePageMeals=useCallback((searchTerm)=>{
@@ -13,6 +13,7 @@ export const AppContext=({children})=>{
         )
 
     },[])
+  
     const fetchRandomMeal=useCallback(()=>{
         axios.get(`https://www.themealdb.com/api/json/v1/1/random.php`)
         .then(res=>{console.log(res.data.meals)

@@ -1,5 +1,6 @@
 import React,{useEffect,useContext} from 'react'
-import { myContext } from '../context/Context' 
+import { myContext } from '../context/Context'
+import { Link } from 'react-router-dom' 
 import "./Categories.scss"
 const Categories = () => {
   const {fetchCategories,categories}=useContext(myContext)
@@ -8,6 +9,7 @@ const Categories = () => {
   },[fetchCategories])
   return (
     <div className='categories'>
+      <Link to="/random"><li>RandomMeal</li></Link>
       {categories.map((category)=>(
        <div key={category.idCategory}>
         <img src={category.strCategoryThumb} alt="#"/>
